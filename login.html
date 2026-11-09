@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#171714">
+  <title>Log in or register | What the Heart Keeps</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-heart">♡</span> What the Heart Keeps</a>
+    <nav class="main-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="index.html#stories">Stories</a><a href="about.html">About</a></nav>
+    <a class="button button-quiet" href="login.html">Log in</a>
+  </header>
+  <main class="page-shell">
+    <section class="page-content auth-content">
+      <p class="eyebrow">Welcome</p>
+      <h1>Come as you are</h1>
+      <p class="muted-note">These forms are a visual starting point. Accounts cannot be created or authenticated until a secure server and database are connected.</p>
+      <form class="site-form" id="login-form">
+        <h2>Log in</h2>
+        <label for="login-email">Email</label><input id="login-email" name="email" type="email" autocomplete="email" required>
+        <label for="login-password">Password</label><input id="login-password" name="password" type="password" autocomplete="current-password" required>
+        <button class="button button-primary" type="submit">Log in</button>
+        <p class="form-message" role="status" aria-live="polite"></p>
+      </form>
+      <form class="site-form" id="register" aria-label="Create an account">
+        <h2>Create an account</h2>
+        <label for="register-name">Name</label><input id="register-name" name="name" type="text" autocomplete="name" required>
+        <label for="register-email">Email</label><input id="register-email" name="email" type="email" autocomplete="email" required>
+        <label for="register-password">Password</label><input id="register-password" name="password" type="password" autocomplete="new-password" minlength="8" required>
+        <button class="button button-outline" type="submit">Register</button>
+        <p class="form-message" role="status" aria-live="polite"></p>
+      </form>
+      <a class="text-link" href="index.html">← Back to the home page</a>
+    </section>
+  </main>
+  <footer class="site-footer"><a class="brand" href="index.html"><span class="brand-heart">♡</span> What the Heart Keeps</a><p>A softer corner of the internet.</p></footer>
+  <script>
+    document.querySelectorAll(".site-form").forEach((form) => {
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        form.querySelector(".form-message").textContent = "This demo form is not connected to account services yet.";
+      });
+    });
+  </script>
+</body>
+</html>
+
