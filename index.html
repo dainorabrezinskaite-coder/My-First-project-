@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#171714">
+  <title>What the Heart Keeps</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home">
+      <span class="brand-heart">♡</span> What the Heart Keeps
+    </a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#stories">Stories</a>
+      <a href="about.html">About</a>
+    </nav>
+
+    <a class="button button-quiet" href="login.html">Log in</a>
+  </header>
+
+  <main class="page-shell" id="home">
+    <section class="hero">
+      <img
+        class="hero-image"
+        src="https://images.unsplash.com/photo-1632900182533-c8ee9ba229f4?auto=format&fit=crop&w=2200&q=85"
+        alt="A candlelit stack of books beside a rain-speckled window"
+      >
+      <div class="hero-shade"></div>
+
+      <div class="hero-copy">
+        <p class="eyebrow">A little room to be yourself</p>
+        <h1>What the Heart<br>Keeps</h1>
+        <p>Stories, moments and things worth remembering.</p>
+        <a class="button button-primary" href="#stories">
+          Read a story <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+
+      <span class="hero-caption">A quiet place for honest words</span>
+    </section>
+
+    <section class="welcome" id="about">
+      <p class="eyebrow">No perfect words needed</p>
+      <h2>What does your heart want<br class="desktop-break"> to keep today?</h2>
+      <p class="welcome-note">A moment. A feeling. A person. A blessing. A thought.</p>
+      <p class="welcome-detail">
+        Share what matters to you, in your own words. This is a place to
+        listen with kindness and leave judgement at the door.
+      </p>
+      <div class="ornament" aria-hidden="true"><span></span>♡<span></span></div>
+    </section>
+
+    <section class="stories" id="stories">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Shared with an open heart</p>
+          <h2>Stories from the heart</h2>
+        </div>
+        <a class="button button-outline" href="#share">
+          Share your story <span aria-hidden="true">＋</span>
+        </a>
+      </div>
+
+      <div class="category-list" aria-label="Story categories">
+        <button class="category-button active" type="button" data-category="All" aria-pressed="true">🌿 All stories</button>
+        <button class="category-button" type="button" data-category="Gratitude" aria-pressed="false">❤️ Gratitude</button>
+        <button class="category-button" type="button" data-category="Beautiful moments" aria-pressed="false">✨ Beautiful moments</button>
+        <button class="category-button" type="button" data-category="Joy" aria-pressed="false">🥹 Joy</button>
+        <button class="category-button" type="button" data-category="Miracles" aria-pressed="false">🕊️ Miracles</button>
+        <button class="category-button" type="button" data-category="Hard days" aria-pressed="false">🌧️ Hard days</button>
+        <button class="category-button" type="button" data-category="Just sharing" aria-pressed="false">🤍 Just sharing</button>
+      </div>
+
+      <article class="story-card">
+        <div class="story-meta">
+          <span class="story-avatar">A</span>
+          <span>Shared with gratitude</span>
+          <span class="meta-dot">·</span>
+          <span>A little while ago</span>
+        </div>
+        <h3>A small moment of gratitude</h3>
+        <p>Today I noticed how beautiful a simple moment can be.</p>
+
+        <div class="reaction-row" aria-label="Send a kind reaction">
+          <button type="button" aria-label="Send love">❤️ <span>12</span></button>
+          <button type="button" aria-label="Send a hug">🫶</button>
+          <button type="button" aria-label="Say thank you">🙏</button>
+          <button type="button" aria-label="Celebrate">✨</button>
+          <button type="button" aria-label="Feel moved">🥹</button>
+        </div>
+        <div class="story-pagination">
+  <button class="button button-outline" type="button">← Previous story</button>
+  <button class="button button-outline" type="button">Next story →</button>
+</div>
+      </article>
+
+      <p class="gentle-note">Every story is met with care. Thank you for being here.</p>
+    </section>
+
+    <section class="share-section" id="share">
+      <p class="eyebrow">Your words belong here</p>
+      <h2>Share your story anonymously</h2>
+      <p class="share-intro">No account or name is needed. Choose a category, add a title and write what you would like to share.</p>
+      <form class="share-form" id="share-form">
+        <label for="story-category">Category</label>
+        <select id="story-category" name="category" required>
+          <option value="Gratitude">Gratitude</option>
+          <option value="Beautiful moments">Beautiful moments</option>
+          <option value="Joy">Joy</option>
+          <option value="Miracles">Miracles</option>
+          <option value="Hard days">Hard days</option>
+          <option value="Just sharing">Just sharing</option>
+        </select>
+        <label for="story-title">Story title</label>
+        <input id="story-title" name="title" type="text" maxlength="80" required>
+        <label for="story-text">Your story</label>
+        <textarea id="story-text" name="text" rows="6" maxlength="1500" required></textarea>
+        <button class="button button-primary" type="submit">Share anonymously</button>
+        <p class="form-message" id="share-message" role="status" aria-live="polite"></p>
+      </form>
+      <p class="muted-note">This demo saves submissions only in this browser. Other visitors will not see them until the site is connected to a server.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand" href="#home"><span class="brand-heart">♡</span> What the Heart Keeps</a>
+    <p>A softer corner of the internet.</p>
+  </footer>
+  <script src="script.js?v=3" defer></script>
+</body>
+</html>
+
